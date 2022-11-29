@@ -9,13 +9,41 @@ module.exports = {
                     from: 'whatsapp:+14155238886',
                     to: 'whatsapp:+254717191119'
                 })
-                .then(message => console.log(message.sid))
+                .then(message => {
+                    res.json({
+                        message
+                    })
+                })
                 .done();
+        } catch (err) {
+            res.status(400).json({
+                code: 400,
+                message: err.message
+            })
+        }
+    },
+    reply: async (req, res) => {
+        try {
             res.json({
-                message: 'Hello'
+                data: req.body
             })
         } catch (err) {
-            console.log(err.message)
+            res.status(400).json({
+                code: 400,
+                message: err.message
+            })
+        }
+    },
+    callback: async (req, res) => {
+        try {
+            res.json({
+                data: req.body
+            })
+        } catch (err) {
+            res.status(400).json({
+                code: 400,
+                message: err.message
+            })
         }
     }
 }
