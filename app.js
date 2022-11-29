@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
 }))
-app.use('/api/v1', router)
+app.use('/', router)
 
 app.listen(PORT, () => {
     console.log(`Server Started At Port: ${PORT}`)
