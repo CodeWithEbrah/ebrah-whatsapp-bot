@@ -25,9 +25,18 @@ module.exports = {
     reply: async (req, res) => {
         console.log(req.body)
         try {
-            res.json({
-                data: req.body
-            })
+            await client.messages
+                .create({
+                    body: `I love You Too😘😍`,
+                    from: 'whatsapp:+14155238886',
+                    to: req.body.From
+                })
+                .then(message => {
+                    res.json({
+                        message
+                    })
+                })
+                .done();
         } catch (err) {
             res.status(400).json({
                 code: 400,
