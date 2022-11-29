@@ -5,7 +5,7 @@ module.exports = {
         try {
             await client.messages
                 .create({
-                    body: 'Piga Zoezi',
+                    body: req.body.message,
                     from: 'whatsapp:+14155238886',
                     to: 'whatsapp:+254717191119'
                 })
