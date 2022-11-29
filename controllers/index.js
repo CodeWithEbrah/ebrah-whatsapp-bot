@@ -23,6 +23,7 @@ module.exports = {
         }
     },
     reply: async (req, res) => {
+        console.log(req.body)
         try {
             res.json({
                 data: req.body
@@ -35,6 +36,7 @@ module.exports = {
         }
     },
     callback: async (req, res) => {
+        console.log(req.body)
         try {
             res.json({
                 data: req.body
