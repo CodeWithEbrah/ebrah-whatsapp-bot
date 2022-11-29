@@ -4,7 +4,8 @@
   "description": "Ebrah's whatsApp Bot",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "CodeWithEbrah",
   "license": "MIT",
@@ -13,9 +14,23 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "twilio": "^3.83.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeWithEbrah/ebrah-whatsapp-bot.git"
+  },
+  "keywords": [
+    "whatsapp-bot",
+    "bots",
+    "CodeWithEbrah"
+  ],
+  "bugs": {
+    "url": "https://github.com/CodeWithEbrah/ebrah-whatsapp-bot/issues"
+  },
+  "homepage": "https://github.com/CodeWithEbrah/ebrah-whatsapp-bot#readme"
 }
